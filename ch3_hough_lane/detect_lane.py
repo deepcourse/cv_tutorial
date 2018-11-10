@@ -2,6 +2,7 @@
 import cv2
 import numpy as np
 
+#利用霍夫变换在图像中寻找直线，从而实现车道线检测
 if __name__ == "__main__":
     image = cv2.imread("lane.jpg")
     image = image[550:, :, :] #取感兴趣区域

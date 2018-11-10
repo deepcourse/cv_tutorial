@@ -1,1 +1,2 @@
-opencv_traincascade -data xml -vec positive.vec -bg neg_small.txt -nstages 5 -nsplits 2 -minhitrate 0.999 -maxfalsealarm 0.5 -h 64 -w 64
+mkdir -p save_dir
+opencv_traincascade -data save_dir -vec positives.vec -bg dataset/negatives.txt -numPos 420 -numNeg 450 -w 24 -h 24 -precalcValBufSize 1024 -precalcIdxBufSize 1024 -numStages 25 -acceptanceRatioBreakValue 1.0e-5
