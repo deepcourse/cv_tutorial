@@ -7,7 +7,6 @@ files = os.listdir("dataset/test_img")
 for f in files:
     print f
     img = cv2.imread("dataset/test_img/" + f)
-    img = cv2.resize(img, (img.shape[1] / 2, img.shape[0] / 2))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     cars = cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5)
     
